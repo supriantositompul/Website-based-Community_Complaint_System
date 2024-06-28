@@ -86,8 +86,8 @@
 
 ### **`Contributor:`**
 
-- **Rachmad Fauzi**
-- **Suprianto Dharma Sitompul**
-- **Muhammad Ihsan Kurnia Al-Karim**
-- **Arda Prayogo**
-- **Faza Naura**
+- **Rachmad Fauzi - Frontend**
+- **Suprianto Dharma Sitompul - Backend**
+- **Muhammad Ihsan Kurnia Al-Karim - Backend**
+- **Arda Prayogo - Frontend**
+- **Faza Naura - Frontend**
