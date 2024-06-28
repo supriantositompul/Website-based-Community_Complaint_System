@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Catamaran:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+  <!-- Section: Design Block -->
+  <section class="vh-100">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-6 col-lg-6 col-xl-5">
+          <img src="img/img-puas.png" class="img-fluid" alt="Sample image" />
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-5 login-container">
+          <form th:method="POST" id="loginForm" th:action="@{/login}" th:object="${loginRequest}">
+            <div class="text-center">
+              <p class="lead fw-normal mb-0 login-title">Login</p>
+            </div>
+            <div class="divider d-flex align-items-center my-4"></div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-2">
+              <input type="text" id="inputUsername" class="form-control form-control-lg" placeholder="Enter username"
+                th:field="*{username}" />
+              <label class="form-label" for="inputUsername">Username</label>
+            </div>
+            <small id="usernameHelp" class="form-text text-muted"></small>
+            <div class="error-message" id="usernameError"></div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input type="password" id="inputPassword" class="form-control form-control-lg"
+                placeholder="Enter password" th:field="*{password}" />
+              <label class="form-label" for="inputPassword">Password</label>
+            </div>
+            <div class="error-message" id="passwordError"></div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <!-- Checkbox -->
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div>
+              <a href="#!" class="text-body">Forgot password?</a>
+            </div>
+
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="submit" class="btn btn-primary btn-lg btn-login">
+                Login
+              </button>
+              <p class="small fw-bold mt-2 pt-1 mb-0 register-text">
+                Don't have an account?
+                <a th:href="@{/register}" class="link-danger">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var username = document.getElementById('inputUsername').value;
+      var password = document.getElementById('inputPassword').value;
+      var usernameError = document.getElementById('usernameError');
+      var passwordError = document.getElementById('passwordError');
+
+      usernameError.textContent = '';
+      passwordError.textContent = '';
+      // Validate username
+      if (!username) {
+        usernameError.textContent = 'Username is required';
+        return;
+      }
+      // Validate password
+      if (!password) {
+        passwordError.textContent = 'Password is required';
+        return;
+      }
+
+      console.log('Username:', username);
+      console.log('Password:', password);
+      document.getElementById('loginForm').submit();
+    });
+  </script>
+</body>
+
+</html>

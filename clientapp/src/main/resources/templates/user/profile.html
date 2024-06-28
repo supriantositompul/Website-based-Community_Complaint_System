@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/main}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Profile</title>
+</head>
+
+<body>
+  <!-- Content -->
+  <section class="container mt-5" layout:fragment="content">
+    <div class="title text-center">
+      <h1>Profile</h1>
+    </div>
+    <div class="card rounded-5 bg-body-secondary p-2 mx-3">
+      <div class="profile-icon text-center mb-4 bg-white rounded-circle" width="200px">
+        <img src="img/user.png" width="150" alt="Profile Icon" />
+      </div>
+      <div class="data-user text-center">
+        <h2 class="card-text"><strong>Username:</strong> <span th:text="${user.username}"></span></h2>
+        <h2 class="card-text"><strong>Name:</strong> <span th:text="${user.fullName}"></span></h2>
+        <h2 class="card-text"><strong>Email:</strong> <span th:text="${user.email}"></span></h2>
+        <h2 class="card-text"><strong>Address:</strong> <span th:text="${user.address}"></span></h2>
+        <h2 class="card-text"><strong>Phone Number:</strong> <span th:text="${user.phoneNumber}"></span></h2>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn aduan btn-lg btn-primary rounded-pill buat-pengaduan">Update Profile</button>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

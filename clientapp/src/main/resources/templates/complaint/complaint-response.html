@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/main}"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengaduan</title>
+</head>
+<body>
+  <!-- Content -->
+  <section class="container vh-100" layout:fragment="content">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-9">
+            <h1 class="mb-4 text-center fw-bold">BUAT PENGADUAN</h1>
+            <hr class="mx-n3" />
+            <div class="card card-color shadow" style="border-radius: 15px">
+              <div class="card-body">
+
+                <div class="row align-items-center pt-4 pb-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Kategori</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <select
+                      data-mdb-select-init
+                      class="form-control form-control-lg"
+                    >
+                      <option value="" selected disabled>Pilih Kategori</option>
+                      <option 
+                      th:each="category : ${category}"
+                      th:value="{category.id}"
+                      th:field="*{category.name}">
+                    </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row align-items-center pt-4 pb-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Status</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <select
+                      data-mdb-select-init
+                      class="form-control form-control-lg"
+                    >
+                      <option value="" selected disabled>Ubah Status</option>
+                      <option 
+                      th:each="category : ${category}"
+                      th:value="{category.id}"
+                      th:field="*{category.name}">
+                    </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row align-items-center pt-4 pb-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Judul</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <input type="text" class="form-control form-control-lg" />
+                  </div>
+                </div>
+
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Tanggal</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <input
+                      type="datetime-local"
+                      class="form-control form-control-lg"
+                      placeholder="example@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Deskripsi</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      placeholder="Deskripsikan apa yang ingin anda adukan"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Tanggapan</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      placeholder="Masukkan tanggapan"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+                    <h6 class="mb-0">Tambahkan bukti</h6>
+                  </div>
+                  <div class="col-md-9 pe-5">
+                    <input
+                      class="form-control form-control-lg"
+                      id="formFileLg"
+                      type="file"
+                    />
+                    <div class="small text-muted mt-2">
+                      Upload gambar max 5 mb.
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mx-n3" />
+
+                <div class="d-flex justify-content-center">
+                  <!-- Tombol untuk Buat Pengaduan -->
+                  <a
+                    class="btn rounded-pill d-flex align-items-center justify-content-center p-2 me-3 aduan col-4"
+                    href="#"
+                    role="button"
+                  >
+                    <span class="material-symbols-outlined m-1">post_add</span>
+                    <span class="d-none d-md-inline">Buat pengaduan</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  </section>
+</body>
+</html>

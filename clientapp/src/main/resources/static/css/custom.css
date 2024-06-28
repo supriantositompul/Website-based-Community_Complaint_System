@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  .header {
+    background-color: #f2f2f2;
+    padding: 1rem 0;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-right: 100px;
+  }
+  
+  .header .logo img {
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .header .nav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header .nav li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #4d4c7d;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    margin-bottom: 2rem;
+  }
+  
+  .hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .hero .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .rounded-button {
+    border-radius: 45px;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #363062;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .hero button a {
+    background-color: #363062;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    /* border-radius: 40px; */
+    text-decoration: none;
+  }
+  
+  .hero .container img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .hero .container span {
+    font-size: 18px;
+  }
+  
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .cta {
+    background-color: #f2f2f2;
+    padding: 3rem 0;
+  }
+  
+  .cta .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cta button {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

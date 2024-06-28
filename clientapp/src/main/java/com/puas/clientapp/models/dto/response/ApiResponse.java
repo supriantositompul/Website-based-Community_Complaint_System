@@ -1,0 +1,17 @@
+package com.puas.clientapp.models.dto.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ApiResponse<T> {
+    private int status;
+    private String message;
+    private String timestamp;
+    private T data;
+    private Object metadata;
+    private Object errors;
+}

@@ -1,0 +1,97 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  width: 525px;
+  height: 540px;
+  background-color: #d9d9d9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.profile-icon img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.username {
+  font-size: 24px;
+  color: #363062;
+  font-weight: bold;
+}
+
+.email {
+  font-family: "Catamaran", sans-serif;
+  font-size: 18px;
+  color: rgba(77, 76, 125, 0.7);
+}
+
+.buat-pengaduan {
+  width: 300px;
+  height: 55px;
+  background-color: #f99417;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.buat-pengaduan:hover {
+  background-color: white;
+  color: #f99417;
+  border: 2px solid #f99417;
+}
+
+.report-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.report {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4d4c7d;
+}
+
+.hasil-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.hasil {
+  font-family: "Quicksand", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f99417;
+}

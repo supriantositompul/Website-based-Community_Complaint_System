@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/main}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat</title>
+</head>
+
+<body>
+  <!-- Content -->
+  <section class="container mt-5" layout:fragment="content">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="fw-bold">RIWAYAT PENGADUAN</h1>
+      <!-- * Button trigger modal create -->
+      <!-- Tombol untuk Buat Pengaduan -->
+      <a class="btn rounded-pill d-flex align-items-center me-3 aduan hover-animate" th:href="@{/complaint}"
+        role="button">
+        <span class="material-symbols-outlined m-1">post_add</span>
+        <span class="d-none d-md-inline">Buat pengaduan</span>
+      </a>
+    </div>
+    <table id="table-region" class="table table-bordered table-striped table-hover text-center mt-5">
+      <thead class="table-dark">
+        <tr>
+          <th class="col-2 text-center">ID</th>
+          <th class="col-2 text-center">Title</th>
+          <th class="col-2 text-center">Date</th>
+          <th class="col-2 text-center">Note</th>
+          <th class="col-2 text-center">Status</th>
+          <th class="col-2 text-center">Action</th>
+        </tr>
+      </thead>
+            <!-- <a class="btn aduan rounded-pill" th:href="@{/complaint-response}">
+          tanggapi
+          </a> -->
+      <tbody>
+        <tr th:each="history: ${histories}">
+          <td th:text="${history.id}"></td>
+          <td th:text="${history.complaint.title}"></td>
+          <td th:text="${history.date}"></td>
+          <td th:text="${history.note}"></td>
+          <td th:text="${history.status.name}">
+            <button class="btn btn-success disabled rounded-pill">
+            </button>
+          </td>
+          <td>
+            <a class="btn btn-primary rounded-pill" th:href="@{/history/{id}(id=${history.id})}">
+              detail
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  </section>
+</body>
+
+</html>

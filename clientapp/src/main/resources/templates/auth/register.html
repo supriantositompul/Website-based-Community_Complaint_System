@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Page</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Catamaran:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/login.css" />
+  <style>
+    .form-outline {
+      margin-bottom: 1.5rem;
+    }
+
+    .row .col-md-6 {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    .btn-signup {
+      display: block;
+      width: 100%;
+      font-size: 1.25rem;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .login-container {
+      padding: 2rem;
+    }
+
+    .register-text {
+      text-align: center;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Modal styling (optional) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Section: Design Block -->
+  <section class="vh-100">
+    <div class="container h-100">
+
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-6 col-lg-6 col-xl-5">
+          <img src="img/regist-img.png" class="img-fluid" alt="Sample image" />
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-5 login-container">
+          <form id="registerForm" th:action="@{/register}" th:method="POST" th:object="${registerRequest}">
+            <div class="text-center">
+              <p class="lead fw-normal mb-0 login-title">Register</p>
+            </div>
+            <div class="divider d-flex align-items-center my-4"></div>
+
+            <div class="form-outline mb-3">
+              <input type="text" id="fullName" class="form-control form-control-lg" placeholder="fullName"
+                name="fullName" th:field="*{fullName}" required>
+              <label class="form-label" for="fullName">Full Name</label>
+            </div>
+            <div class="form-outline mb-3">
+              <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" name="email"
+                th:field="*{email}" required>
+              <label class="form-label" for="email">Email</label>
+            </div>
+
+            <div class="form-outline mb-3">
+              <input type="text" id="phoneNumber" class="form-control form-control-lg" placeholder="phoneNumber"
+                th:field="*{phoneNumber}" name="phoneNumber" required>
+              <label class="form-label" for="phoneNumber">Phone Number</label>
+            </div>
+
+            <div class="form-outline mb-3">
+              <input type="text" id="address" class="form-control form-control-lg" placeholder="address" name="address"
+                th:field="*{address}" required>
+              <label class="form-label" for="address">Address</label>
+            </div>
+            <div class="form-outline mb-3">
+              <input type="text" id="username" class="form-control form-control-lg" placeholder="Username"
+                th:field="*{username}" name="username" required>
+              <label class="form-label" for="username">Username</label>
+            </div>
+            <div class="form-outline mb-3">
+              <input type="password" id="password" class="form-control form-control-lg" placeholder="Password"
+                th:field="*{password}" name="password" required>
+              <label class="form-label" for="password">password</label>
+            </div>
+
+            <div class="text-center mt-4 pt-2">
+              <button type="submit" class="btn btn-primary btn-lg btn-signup">
+                Register
+              </button>
+              <p class="small fw-bold mt-2 pt-1 mb-0 register-text">
+                Already have an account?
+                <a th:href="@{/login}" class="link-danger">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+</body>
+
+</html>

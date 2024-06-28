@@ -1,0 +1,81 @@
+* {
+    font-family: "Quicksand", sans-serif;
+    color: #363062;
+    
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 2s forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hover-animate {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .hover-animate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+* a{
+    font-size: 1.2rem;
+}
+
+p{
+    font-family: "Catamaran", sans-serif;
+    font-size: 1.2rem;
+}
+.jumbotron-img {
+max-width: 50%;
+height: auto;
+}
+
+.aduan {
+    background-color: #F99417;
+    color: white;
+    }
+.aduan:hover {
+    background-color: #4D4C7D;
+    color: white;
+}
+    
+.aduan span {
+    color: white;
+}
+.riwayat {
+    background-color: #363062;
+    color: white;
+    }
+    .riwayat:hover {
+        background-color: #4D4C7D;
+        color: white;
+            span {
+                color: white;
+            }
+}
+    
+.riwayat span {
+    color: white;
+}
+
+.judulAdu {
+    color: #F99417;
+}
+
+.foot {
+    background-color: #363062;
+    width: 100%;
+    color: white;
+}
+
+.card-color{
+    background-color: #f5f5f5;
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Pengaduan</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/admin.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+      integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <!-- Sidebar -->
+      <nav
+      id="sidebarMenu"
+      class="collapse d-lg-block sidebar collapse bg-white"
+    >
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a
+            th:href="@{/dashboard}"
+            class="list-group-item list-group-item-action py-2 actived"
+            data-mdb-ripple-init
+            >
+            <i class="fa-solid fa-chart-line me-3"></i>
+            <span>DASHBOARD</span>
+          </a>
+          <a
+            th:href="@{/user}"
+            class="list-group-item list-group-item-action py-2"
+            data-mdb-ripple-init
+          >
+            <i class="fa-regular fa-user me-3"></i>
+            <span>Manajemen User</span>
+          </a>
+          <a
+            th:href="@{/pengaduan}"
+            class="list-group-item list-group-item-action py-2"
+            data-mdb-ripple-init
+          >
+            <i class="fa-regular fa-flag me-3"></i>
+            <span>Pengaduan</span>
+          </a>
+          <a
+            th:href="@{/riwayat}"
+            class="list-group-item list-group-item-action py-2"
+            data-mdb-ripple-init
+          >
+            <i class="fa-solid fa-clock-rotate-left me-3"></i>
+            <span>Riwayat</span>
+          </a>
+          <a
+            th:href="@{/role}"
+            class="list-group-item list-group-item-action py-2"
+            data-mdb-ripple-init
+          >
+            <i class="fa-solid fa-user-tie me-3"></i>
+            <span>Role</span>
+          </a>
+          <a
+            th:href="@{/category}"
+            class="list-group-item list-group-item-action py-2"
+            data-mdb-ripple-init
+          >
+            <i class="fa-solid fa-list me-3"></i>
+            <span>Category</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+      <!-- Sidebar -->
+
+      <!-- Navbar -->
+      <nav
+        id="main-navbar"
+        class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+      >
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-collapse-init
+            data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand" href="#">
+            <img src="img/logo text.png" height="25" alt="" loading="lazy" />
+          </a>
+          <!-- Search form -->
+          <form class="d-none d-md-flex input-group w-auto my-auto">
+            <input
+              autocomplete="off"
+              type="search"
+              class="form-control rounded"
+              placeholder='Search (ctrl + "/" to focus)'
+              style="min-width: 225px"
+            />
+            <span class="input-group-text border-0"
+              ><i class="fas fa-search"></i
+            ></span>
+          </form>
+
+          <!-- Right links -->
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            <!-- Notification dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-dropdown-init
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"
+                  >1</span
+                >
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+              </ul>
+            </li>
+
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-dropdown-init
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
+                  class="rounded-circle"
+                  height="22"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main style="margin-top: 58px;">
+      <div class="container pt-4">
+        <!--Section: Minimal statistics cards-->
+        <div class="container mt-4">
+            <div class="mb-3">
+              <div class="col">
+                <h2>Pengaduan</h2>
+              </div>
+              <div class="col text-right">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#createModal">Create</button>
+              </div>
+            </div>
+        
+            <!-- Modal for Create -->
+            <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createModalLabel">Create Complaint</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="createForm">
+                      <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3" required></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="category_id">Category ID</label>
+                        <input type="text" class="form-control" id="category_id" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="current_status">Current Status</label>
+                        <input type="text" class="form-control" id="current_status" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="user_id">User ID</label>
+                        <input type="text" class="form-control" id="user_id" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Complaint Table -->
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Date</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Category ID</th>
+                  <th>Status</th>
+                  <th>User ID</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="complaintTableBody">
+                <!-- Table rows will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        
+          <!-- Bootstrap JS and dependencies -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+          <!-- Custom JavaScript -->
+          <script>
+            // Sample data for initial rendering (can be fetched from server-side in real application)
+            const complaints = [
+              { id: 1, date: '2024-06-24', title: 'Sample Complaint', description: 'This is a sample complaint.', category_id: 1, current_status: 'Pending', user_id: 1 },
+              { id: 2, date: '2024-06-23', title: 'Another Complaint', description: 'This is another sample complaint.', category_id: 2, current_status: 'Resolved', user_id: 2 }
+            ];
+        
+            // Function to render complaints in the table
+            function renderComplaints() {
+              const tableBody = document.getElementById('complaintTableBody');
+              tableBody.innerHTML = '';
+        
+              complaints.forEach(complaint => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                  <td>${complaint.id}</td>
+                  <td>${complaint.date}</td>
+                  <td>${complaint.title}</td>
+                  <td>${complaint.description}</td>
+                  <td>${complaint.category_id}</td>
+                  <td>${complaint.current_status}</td>
+                  <td>${complaint.user_id}</td>
+                  <td>
+                    <button class="btn btn-sm btn-info" onclick="editComplaint(${complaint.id})">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteComplaint(${complaint.id})">Delete</button>
+                  </td>
+                `;
+                tableBody.appendChild(row);
+              });
+            }
+        
+            // Function to handle form submission for creating a new complaint
+            document.getElementById('createForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+        
+              // Fetch values from the form
+              const date = document.getElementById('date').value;
+              const title = document.getElementById('title').value;
+              const description = document.getElementById('description').value;
+              const category_id = document.getElementById('category_id').value;
+              const current_status = document.getElementById('current_status').value;
+              const user_id = document.getElementById('user_id').value;
+        
+              // Create new complaint object
+              const newComplaint = {
+                id: complaints.length + 1, // Simulated new ID (replace with actual logic)
+                date,
+                title,
+                description,
+                category_id,
+                current_status,
+                user_id
+              };
+        
+              // Add new complaint to complaints array
+              complaints.push(newComplaint);
+        
+              // Clear form fields
+              document.getElementById('createForm').reset();
+        
+              // Close the modal
+              $('#createModal').modal('hide');
+        
+              // Render updated table
+              renderComplaints();
+            });
+        
+            // Function to handle complaint deletion
+            function deleteComplaint(id) {
+              const index = complaints.findIndex(complaint => complaint.id === id);
+              if (index !== -1) {
+                complaints.splice(index, 1);
+                renderComplaints();
+              }
+            }
+        
+            // Function to handle complaint editing (not fully implemented in this example)
+            function editComplaint(id) {
+              alert('Edit functionality can be implemented similarly with a modal prefilled with complaint details.');
+            }
+        
+            // Initial rendering of complaints
+            renderComplaints();
+          </script>
+        </body>
+        <!--Section: Minimal statistics cards-->
+      </div>
+    </main>
+    <!--Main layout-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/admin.js"></script>
+  </body>
+</html>

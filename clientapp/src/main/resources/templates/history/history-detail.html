@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/main}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Detail</title>
+</head>
+
+<body>
+  <!-- Content -->
+  <section class="container vh-100" layout:fragment="content">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-9">
+          <h1 class="mb-4 text-center fw-bold">Detail History Complaint</h1>
+          <hr class="mx-n3" />
+          <div class="card card-color shadow" style="border-radius: 15px">
+            <div class="card-body">
+
+              <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">ID</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.id}"></h6>
+                </div>
+              </div>
+
+
+              <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">Category</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.complaint.category.name}"></h6>
+                </div>
+              </div>
+
+              <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">Status</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.status.name}"></h6>
+                </div>
+              </div>
+
+              <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">Title</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.complaint.title}"></h6>
+                </div>
+              </div>
+
+              <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">Date</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.date}"></h6>
+                </div>
+              </div>
+
+              <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">Deskripsi</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.complaint.title}"></h6>
+                </div>
+              </div>
+
+              <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">Note</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <h6 th:text="${history.note}"></h6>
+                </div>
+              </div>
+
+              <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+                  <h6 class="mb-0">bukti</h6>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <img th:src="@{${history.complaint.attachments}}" alt="">
+                </div>
+              </div>
+
+              <hr class="mx-n3" />
+
+              <div class="d-flex justify-content-center">
+               <!-- Tombol untuk Kembali -->
+               <a class="btn rounded-pill d-flex align-items-center justify-content-center p-2 me-3 aduan col-4"
+               th:href="@{/history}" role="button">
+               <span class="material-symbols-outlined m-1">arrow_back</span>
+               <span class="d-none d-md-inline">Back</span>
+             </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+</body>
+
+</html>

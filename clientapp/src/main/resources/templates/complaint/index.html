@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/main}"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUAS</title>
+</head>
+<body>
+  <!-- Content -->
+  <section class="mt-5" layout:fragment="content">
+    
+      <!-- Jumbotron -->
+      <div class="p-5 text-center bg-body-tertiary fade-in">
+        <h1 class="mb-3">
+          <strong>SELAMAT DATANG DI PUAS</strong>
+        </h1>
+        <p class="mb-3">"Suara Anda, Perubahan Kita!"</p>
+        <img src="img/laporan.png" class="jumbotron-img" alt="laporan" />
+      </div>
+      <!-- Jumbotron -->
+    </header>
+
+    <!-- Button -->
+    <div class="container-fluid mb-5">
+      <div class="d-flex justify-content-center">
+        <!-- Tombol untuk Buat Pengaduan -->
+        <a
+          class="btn rounded-pill d-flex align-items-center p-3 me-3 aduan col-2 hover-animate"
+          th:href="@{/complaint}"
+          role="button"
+          >
+          <span class="material-symbols-outlined m-1">post_add</span>
+          <span class="d-none d-md-inline">Buat pengaduan</span>
+        </a>
+        <!-- Tombol untuk Riwayat Pengaduan -->
+        <a
+        class="btn rounded-pill d-flex align-items-center p-3 col-2 riwayat collapse hover-animate"
+        th:href="@{/history}"
+          role="button"
+        >
+          <span class="material-symbols-outlined m-1">history</span>
+          <span class="d-none d-md-inline">Riwayat pengaduan</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tentang -->
+    <div class="container justify-content-center mt-5" id="tentang">
+      <div class="mb-3">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="card-body">
+              <h2 class="card-title fw-bold">Apa itu PUAS?</h2>
+              <p class="card-tex t">
+                "Selamat datang di PUAS (Pusat Aspirasi), sebuah platform
+                revolusioner yang didedikasikan untuk menghubungkan suara
+                masyarakat dengan pembuat kebijakan dan pemimpin komunitas. Di
+                PUAS, kami percaya bahwa setiap aspirasi adalah langkah awal
+                menuju perubahan yang lebih baik. Kami menyediakan ruang yang
+                aman dan mudah diakses untuk Anda menyampaikan ide, saran, dan
+                kritik. Tim kami siap mendengarkan dan mengolah setiap masukan
+                menjadi tindakan nyata. Bersama PUAS, mari kita wujudkan harapan
+                dan cita-cita untuk membangun bangsa yang lebih baik. Aspirasi
+                Anda adalah prioritas kami, dan perubahan yang Anda inginkan
+                adalah misi kami. Bergabunglah dengan PUAS dan sampaikan suara
+                Anda untuk Indonesia yang lebih baik!"
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="img/keluh.png"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tentang -->
+
+    <!-- Fitur Riwayat -->
+    <div class="container justify-content-center mt-5" id="tentang">
+      <h1 class="fw-bold text-center mt-5 mb-5">FITUR KAMI</h1>
+      <div class="card mb-3 p-5 card-color">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img
+              src="img/pengaduan.png"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h2 class="card-title fw-bold">Melihat riwayat</h2>
+              <p class="card-text">
+                "Dengan fitur Riwayat Pengaduan, Anda dapat melacak status dan
+                perkembangan dari setiap pengaduan yang telah Anda sampaikan.
+                Pantau proses penanganan secara transparan dan pastikan setiap
+                masalah mendapatkan perhatian yang layak hingga terselesaikan."
+              </p>
+              <!-- Tombol untuk Riwayat Pengaduan -->
+              <a
+                class="btn rounded-pill d-flex align-items-center p-3 col-6 riwayat collapse hover-animate"
+                th:href="@{/history}"
+                role="button"
+              >
+                <span class="material-symbols-outlined m-1">history</span>
+                <span class="d-none d-sm-inline">Riwayat pengaduan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fitur Riwayat -->
+
+    <!-- Fitur Buat Pengaduan -->
+    <div class="container justify-content-center my-5" id="tentang">
+      <div class="card mb-3 p-5 card-color">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="card-body">
+              <h2 class="card-title fw-bold judulAdu">Melaporkan pengaduan</h2>
+              <p class="card-text">
+                "Fitur Laporan Pengaduan memungkinkan Anda untuk menyampaikan
+                keluhan atau permasalahan dengan mudah dan cepat. Sampaikan
+                detail masalah yang Anda hadapi, dan tim kami akan
+                menindaklanjuti setiap laporan dengan serius untuk mencari
+                solusi yang tepat."
+              </p>
+              <!-- Tombol untuk Buat Pengaduan -->
+              <a
+                class="btn rounded-pill d-flex align-items-center p-3 me-3 aduan col-6 hover-animate"
+                th:href="@{/complaint}"
+                role="button"
+              >
+                <span class="material-symbols-outlined m-1">post_add</span>
+                <span class="d-none d-sm-inline">Buat pengaduan</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="img/demo-01.png"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fitur Buat Pengaduan -->
+    <!-- * footer => fragment -->
+    <div th:replace="components/footer :: footer"></div>
+  </section>
+
+</body>
+</html>
