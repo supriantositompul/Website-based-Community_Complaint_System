@@ -4,24 +4,18 @@
 
 ---
 
-### **`Kelompok 04:`**
 
-- **Rachmad Fauzi**
-- **Suprianto Dharma Sitompul**
-- **Muhammad Ihsan Kurnia Al-Karim**
-- **Arda Prayogo**
-- **Faza Naura**
+### **`Ketentuan Repository:`**
+
+- ❌ Dilarang mengakses atau menyalahgunakan repositori kelompok lain.
+- 💻 Fokus pada pengerjaan kelompok masing-masing.
+- 🤓 Untuk kelompok lain bisa sharing, melihat proses, serta memicu semangat untuk memberikan hasil yang terbaik pada projectnya masing-masing. 💪💪💪
 
 ---
 
-``` json
-
-
-
-
 ### **`Design & Documentation:`**
 
-- [Slide of Presentation](https://docs.google.com/presentation/d/1tdkz7QN-c6AztnU57zik_G3A6Q8qnSF1qfcXlTR8YGU/edit?usp=sharing)
+- [Slide of Presentation](https://www.canva.com/design/DAGJBDfKjio/jDRw6XB2JUKIpueZKz8Q2w/edit?utm_content=DAGJBDfKjio&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - [BPMN](https://drive.google.com/file/d/1gVny5Fsc_vq5TSfrtEiUxFVl60cPGlvk/view?usp=sharing)
 
 - [Use Case](https://drive.google.com/file/d/1gVny5Fsc_vq5TSfrtEiUxFVl60cPGlvk/view?usp=sharing)
@@ -29,19 +23,28 @@
 - [Entity Relational Diagram](https://drive.google.com/file/d/1gVny5Fsc_vq5TSfrtEiUxFVl60cPGlvk/view?usp=sharing)
 
 - [Data Dummy](https://docs.google.com/spreadsheets/d/1WkNsZ1pAzEYq2eqEWBZpwxFkRx-uSIyb1JRJWCQx7VI/edit?usp=sharing)
-- [Progress of Project](#)
 
 ---
 
 ### **`Screenshot:`**
 
-- Dashboard (Example)
+- Dashboard
+  ![Dashboard admin page](/materials/img/ss-web/dashboard.png)
+- Dashboard Riwayat
+  ![Dashboard admin riwayat page](/materials/img/ss-web/dashboard-riwayat.png)
+- Home
+  ![Dashboard home page](/materials/img/ss-web/home.png)
+
+- Complaint
+  ![Dashboard home page](/materials/img/ss-web/complaint.png)
+- History
+  ![Dashboard home page](/materials/img/ss-web/history.png)
 
 ---
 
 ### **`Pembagian Tugas:`**
 
-- (silahkan edit sesuai kebutuhan atau bisa dilink pada `Progress of Project` - ke **spreadsheet**)
+- [Progress of Project](https://docs.google.com/spreadsheets/d/10SGNaPfxzG1x7DNXwok8DFZCymJm0LBHqPJtzagPiGQ/edit?usp=sharing)
 
 ---
 
@@ -79,3 +82,12 @@
     |-- mvwn.cmd
     |-- pom.xml
 ```
+
+
+### **`Contributor:`**
+
+- **Rachmad Fauzi**
+- **Suprianto Dharma Sitompul**
+- **Muhammad Ihsan Kurnia Al-Karim**
+- **Arda Prayogo**
+- **Faza Naura**
