@@ -38,9 +38,7 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public User registration(RegistrationRequest registrationRequest) {
         User user = modelMapper.map(registrationRequest, User.class);
-
         user.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
-
         List<Role> roles = Collections.singletonList(roleServiceImpl.getById(1));
         user.setRoles(roles);
 
@@ -50,10 +48,8 @@ public class AuthServiceImpl implements AuthService {
     public User addRole(Integer userId, Role role) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + userId));
-
         List<Role> roles = user.getRoles();
         roles.add(roleServiceImpl.getById(role.getId()));
-
         user.setRoles(roles);
         return userRepository.save(user);
 
